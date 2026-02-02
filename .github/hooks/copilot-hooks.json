@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "hooks": {
+    "sessionStart": [
+      {
+        "type": "command",
+        "bash": "./.github/hooks/scripts/session-start.sh",
+        "powershell": "./.github/hooks/scripts/session-start.ps1",
+        "cwd": ".",
+        "env": {
+          "PROJECT_NAME": "tatooine-holonet",
+          "LOG_LEVEL": "INFO"
+        },
+        "timeoutSec": 15
+      }
+    ],
+    "sessionEnd": [
+      {
+        "type": "command",
+        "bash": "./.github/hooks/scripts/session-end.sh",
+        "powershell": "./.github/hooks/scripts/session-end.ps1",
+        "cwd": ".",
+        "env": {
+          "PROJECT_NAME": "tatooine-holonet"
+        },
+        "timeoutSec": 30
+      }
+    ],
+    "userPromptSubmitted": [
+      {
+        "type": "command",
+        "bash": "./.github/hooks/scripts/log-prompt.sh",
+        "powershell": "./.github/hooks/scripts/log-prompt.ps1",
+        "cwd": ".",
+        "env": {
+          "LOG_LEVEL": "INFO"
+        },
+        "timeoutSec": 10
+      }
+    ],
+    "preToolUse": [
+      {
+        "type": "command",
+        "bash": "./.github/hooks/scripts/security-check.sh",
+        "powershell": "./.github/hooks/scripts/security-check.ps1",
+        "cwd": ".",
+        "env": {
+          "STRICT_MODE": "true"
+        },
+        "timeoutSec": 15
+      },
+      {
+        "type": "command",
+        "bash": "./.github/hooks/scripts/audit-tool-use.sh",
+        "powershell": "./.github/hooks/scripts/audit-tool-use.ps1",
+        "cwd": ".",
+        "timeoutSec": 10
+      }
+    ],
+    "postToolUse": [
+      {
+        "type": "command",
+        "bash": "./.github/hooks/scripts/post-tool-metrics.sh",
+        "powershell": "./.github/hooks/scripts/post-tool-metrics.ps1",
+        "cwd": ".",
+        "timeoutSec": 10
+      }
+    ],
+    "errorOccurred": [
+      {
+        "type": "command",
+        "bash": "./.github/hooks/scripts/error-handler.sh",
+        "powershell": "./.github/hooks/scripts/error-handler.ps1",
+        "cwd": ".",
+        "env": {
+          "ALERT_ENABLED": "false"
+        },
+        "timeoutSec": 15
+      }
+    ]
+  }
+}

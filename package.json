@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "agentsmith": "github:shyamsridhar123/agentsmith-cli"
+  }
+}

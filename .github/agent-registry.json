@@ -1,0 +1,307 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": "1.0.0",
+  "description": "Agent Registry for Tatooine Holonet - Maps tasks to specialized agents",
+  "lastUpdated": "2026-02-01",
+  
+  "agents": {
+    "tatooine-orchestrator": {
+      "name": "Tatooine Orchestrator",
+      "file": ".github/agents/tatooine-orchestrator.agent.md",
+      "type": "coordinator",
+      "description": "Master orchestrator for multi-domain tasks. NEVER writes code.",
+      "delegates_to": [
+        "tatooine-backend",
+        "tatooine-frontend", 
+        "tatooine-agent-designer",
+        "tatooine-platform-architect",
+        "tatooine-devops",
+        "smolagents-developer",
+        "openenv-developer"
+      ],
+      "triggers": [
+        "multi-domain",
+        "coordination",
+        "project planning",
+        "architecture decisions involving multiple systems"
+      ],
+      "skills": []
+    },
+    
+    "tatooine-backend": {
+      "name": "Tatooine Backend Developer",
+      "file": ".github/agents/tatooine-backend.agent.md",
+      "type": "implementer",
+      "description": "FastAPI, SQLAlchemy, async Python, Azure AI integration",
+      "triggers": [
+        "fastapi",
+        "sqlalchemy",
+        "database",
+        "api endpoints",
+        "backend",
+        "python",
+        "azure openai"
+      ],
+      "skills": [
+        "fastapi-backend",
+        "azure-ai-foundry"
+      ]
+    },
+    
+    "tatooine-frontend": {
+      "name": "Tatooine Frontend Developer",
+      "file": ".github/agents/tatooine-frontend.agent.md",
+      "type": "implementer",
+      "description": "Next.js, React Query, Tailwind CSS, shadcn/ui",
+      "triggers": [
+        "next.js",
+        "react",
+        "frontend",
+        "ui",
+        "components",
+        "tailwind",
+        "typescript"
+      ],
+      "skills": [
+        "nextjs-frontend"
+      ]
+    },
+    
+    "tatooine-agent-designer": {
+      "name": "Tatooine Agent Designer",
+      "file": ".github/agents/tatooine-agent-designer.agent.md",
+      "type": "designer",
+      "description": "AI agent personalities, system prompts, droid behavior",
+      "triggers": [
+        "personality",
+        "droid",
+        "c-3po",
+        "r2-d2",
+        "hk-47",
+        "k-2so",
+        "bb-8",
+        "system prompt",
+        "agent behavior",
+        "voice markers"
+      ],
+      "skills": [
+        "agent-personality-design"
+      ]
+    },
+    
+    "tatooine-platform-architect": {
+      "name": "Tatooine Platform Architect",
+      "file": ".github/agents/tatooine-platform-architect.agent.md",
+      "type": "architect",
+      "description": "System architecture, database schema, social platform patterns",
+      "triggers": [
+        "architecture",
+        "schema",
+        "database design",
+        "karma system",
+        "voting system",
+        "threading",
+        "channels"
+      ],
+      "skills": [
+        "social-platform-design"
+      ]
+    },
+    
+    "tatooine-devops": {
+      "name": "Tatooine DevOps Engineer",
+      "file": ".github/agents/tatooine-devops.agent.md",
+      "type": "operations",
+      "description": "Deployment, Docker, CI/CD, Vercel, Railway",
+      "triggers": [
+        "deploy",
+        "docker",
+        "ci/cd",
+        "vercel",
+        "railway",
+        "infrastructure",
+        "github actions"
+      ],
+      "skills": []
+    },
+    
+    "smolagents-developer": {
+      "name": "Smolagents Developer",
+      "file": ".github/agents/smolagents-developer.agent.md",
+      "type": "implementer",
+      "description": "HuggingFace smolagents, CodeAgents, ToolCallingAgents",
+      "triggers": [
+        "smolagents",
+        "huggingface",
+        "codeagent",
+        "toolcallingagent",
+        "mcp tools",
+        "agent tools"
+      ],
+      "skills": [
+        "smolagents-framework"
+      ]
+    },
+    
+    "openenv-developer": {
+      "name": "OpenEnv Developer",
+      "file": ".github/agents/openenv-developer.agent.md",
+      "type": "implementer",
+      "description": "Containerized RL environments, OpenEnv framework",
+      "triggers": [
+        "openenv",
+        "container environment",
+        "rl environment",
+        "sandboxed execution",
+        "gymnasium"
+      ],
+      "skills": [
+        "openenv-framework"
+      ]
+    },
+    
+    "microverse-agent": {
+      "name": "Microverse Agent Designer",
+      "file": ".github/agents/microverse-agent.agent.md",
+      "type": "designer",
+      "description": "Multi-agent social simulations, autonomous character behaviors",
+      "triggers": [
+        "multi-agent simulation",
+        "autonomous agents",
+        "character behaviors",
+        "agent states"
+      ],
+      "skills": [
+        "microverse-ai-agents"
+      ]
+    },
+    
+    "microverse-godot": {
+      "name": "Microverse Godot Developer",
+      "file": ".github/agents/microverse-godot.agent.md",
+      "type": "implementer",
+      "description": "Godot 4, GDScript, game systems",
+      "triggers": [
+        "godot",
+        "gdscript",
+        "game development",
+        "godot 4"
+      ],
+      "skills": [
+        "microverse-godot-practices"
+      ]
+    },
+    
+    "microverse-llm": {
+      "name": "Microverse LLM Integrator",
+      "file": ".github/agents/microverse-llm.agent.md",
+      "type": "implementer",
+      "description": "Multi-provider LLM integration (OpenAI, Claude, Gemini, DeepSeek)",
+      "triggers": [
+        "multi-provider llm",
+        "openai",
+        "claude",
+        "gemini",
+        "deepseek",
+        "llm abstraction",
+        "api provider"
+      ],
+      "skills": [
+        "microverse-llm-integration"
+      ]
+    },
+    
+    "microverse-memory": {
+      "name": "Microverse Memory Architect",
+      "file": ".github/agents/microverse-memory.agent.md",
+      "type": "architect",
+      "description": "Persistent memory systems, relationship tracking, contextual retrieval",
+      "triggers": [
+        "memory system",
+        "relationship tracking",
+        "long-term memory",
+        "memory retrieval",
+        "persistence"
+      ],
+      "skills": [
+        "microverse-memory-systems"
+      ]
+    }
+  },
+  
+  "skills": {
+    "fastapi-backend": {
+      "name": "FastAPI Backend Development",
+      "file": ".github/skills/fastapi-backend/AGENTS.md",
+      "agents": ["tatooine-backend"]
+    },
+    "nextjs-frontend": {
+      "name": "Next.js Frontend Development",
+      "file": ".github/skills/nextjs-frontend/AGENTS.md",
+      "agents": ["tatooine-frontend"]
+    },
+    "azure-ai-foundry": {
+      "name": "Azure AI Foundry Integration",
+      "file": ".github/skills/azure-ai-foundry/AGENTS.md",
+      "agents": ["tatooine-backend"]
+    },
+    "agent-personality-design": {
+      "name": "Agent Personality Design",
+      "file": ".github/skills/agent-personality-design/AGENTS.md",
+      "agents": ["tatooine-agent-designer"]
+    },
+    "social-platform-design": {
+      "name": "Social Platform Design",
+      "file": ".github/skills/social-platform-design/AGENTS.md",
+      "agents": ["tatooine-platform-architect"]
+    },
+    "smolagents-framework": {
+      "name": "Smolagents Framework",
+      "file": ".github/skills/smolagents-framework/AGENTS.md",
+      "agents": ["smolagents-developer"]
+    },
+    "openenv-framework": {
+      "name": "OpenEnv Framework",
+      "file": ".github/skills/openenv-framework/AGENTS.md",
+      "agents": ["openenv-developer"]
+    },
+    "microverse-ai-agents": {
+      "name": "Microverse AI Agents",
+      "file": ".github/skills/microverse-ai-agents/AGENTS.md",
+      "agents": ["microverse-agent"]
+    },
+    "microverse-godot-practices": {
+      "name": "Microverse Godot Practices",
+      "file": ".github/skills/microverse-godot-practices/AGENTS.md",
+      "agents": ["microverse-godot"]
+    },
+    "microverse-llm-integration": {
+      "name": "Microverse LLM Integration",
+      "file": ".github/skills/microverse-llm-integration/AGENTS.md",
+      "agents": ["microverse-llm"]
+    },
+    "microverse-memory-systems": {
+      "name": "Microverse Memory Systems",
+      "file": ".github/skills/microverse-memory-systems/AGENTS.md",
+      "agents": ["microverse-memory"]
+    }
+  },
+  
+  "hooks": {
+    "sessionStart": "Initialize environment, validate compliance",
+    "sessionEnd": "Cleanup, archive logs",
+    "preToolUse": "Security check (BLOCKING), audit logging",
+    "postToolUse": "Metrics collection",
+    "userPromptSubmitted": "Prompt logging",
+    "errorOccurred": "Error categorization and logging"
+  },
+  
+  "rules": {
+    "orchestrator_never_implements": true,
+    "skill_loading_required": true,
+    "agent_routing_strict": true,
+    "hook_security_blocking": true,
+    "o_series_no_temperature": true,
+    "gpt51_explicit_reasoning": true
+  }
+}
